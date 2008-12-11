@@ -1,0 +1,11 @@
+TYPEMAP
+FooContext* T_PTROBJ_FOO_CONTEXT
+
+INPUT
+T_PTROBJ_FOO_CONTEXT
+        $var = XS_STATE(FooContext *, $arg);
+
+OUTPUT
+T_PTROBJ_FOO_CONTEXT
+        XS_STRUCT2OBJ($arg, "Foo", $var);
+
